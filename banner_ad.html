@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>GSAP animation</title>
+
+        <!-- STYLES -->
+		<style type="text/css">
+
+			@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
+            body {
+				padding: 10px;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+            /* myAdLink OUTER CONTAINER  */
+            a#myAdLink {
+                display: inline-block;
+                background-color: #2480d6;
+            }
+
+            /* #myAd INNER CONTAINER */
+            #myAd {
+                position: relative;
+                overflow: hidden;
+                width: 650px;
+                height: 200px;
+            }
+
+            /* myAd_Img Global style */
+            #myAd .myAd_Img {
+                position: absolute;
+                background: url(graphics.png) no-repeat 0px 0px;
+            }
+
+            #myAd #myAd_clouds {
+                width: inherit;     /*inherits from @myAd*/
+                height: inherit;    /*inherits from @myAd*/
+                top: 0px;
+                left: 0px;
+            }
+
+            #myAd #myAd_photo {
+                width: inherit;     /*inherits from @myAd, 640px*/
+                height: 143px;      /*height of element in graphics.png*/
+
+                background-position: 0px -325px;
+                bottom: 0px;        /*anchor to the bottom*/
+                left: 0px;          /*anchor to the left*/
+            }
+
+		</style>
+        <!-- STYLES > END -->
+	</head>
+	<body>
+
+		<!-- markup goes here -->
+
+        <!-- OUTER CONTAINER -->
+        <a id="myAdLink" href="http://lynda.com">
+
+            <!-- MAIN DIV CONTAINER -->
+            <div id="myAd">
+
+                <!-- CLOUDS -->
+                <div class="myAd_Img" id="myAd_clouds"></div>
+
+                <!-- PHOTO -->
+                <div class="myAd_Img" id="myAd_photo"></div>
+
+
+            </div>
+
+        </a>
+
+
+	</body>
+</html>

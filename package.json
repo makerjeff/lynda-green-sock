@@ -1,0 +1,6 @@
+{
+  "name": "lynda-green-sock-tutorial",
+  "version": "0.0.1",
+  "private": true,
+  "description":"a working example based off of the Lynda GreenSock tutorial. Use as base template + reference."
+}

@@ -1,5 +1,7 @@
 #Lynda Green-Sock Tutorial
 
+Last updated: 2016.JAN.14 1:57pm
+
 Tutorial for Green-Sock animation library.
 
 ###Links
@@ -43,6 +45,14 @@ Tutorial for Green-Sock animation library.
 - Use all custom div tags.
 
 - use Timeline feature of GreenSock library so you can easily chain animations.
+```tl1.from('#<div_id>', <seconds>, { <property>: <value>, ease: <ease function (Power2.easeOut, etc) >}, '-=<time offset>' );
+
+- animations can be chained using dot syntax '.'.
+
+- can also be named
+
+- <timeline>.seek('<name>');
+
  
  
 

@@ -137,11 +137,20 @@
             (function(){
                 var tl1 = new TimelineMax();
 
-                tl1.from('#myAd_txt2')
+                //NON CHAINED version of the same
+                tl1.from ('#myAd_txt2', 1.3, {top: -100, ease: Power2.easeOut });
+                tl1.to('#myAd_txt1', 1.3, {top: 210, ease: Power2.easeOut}, '-=0.9');
+                tl1.from ('#myAd_marker', 1.2, {top: -110, ease: Bounce.easeOut}, '-=0.5');
+                tl1.from ('#myAd_shadow', 1.2, {opacity: 0, ease: Bounce.easeOut}, '-=1.2');
+                tl1.from ('#myAd_txt3', 1.2, {scale: 0.2, opacity: 0, ease: Power2.easeOut}, '-=0.9');
+                tl1.from('#myAd_surfboard', 1.3, {top: 230, rotation: -180, left: 500, ease: Back.easeOut}, 'cta');
+
+                // seek to 'cta' time to focus on just this action
+                tl1.seek('cta');
+
+            })(); // AUTO-RUN javascript function
 
 
-
-            });
         </script>
 
 

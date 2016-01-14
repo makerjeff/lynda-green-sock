@@ -26,6 +26,8 @@
                 overflow: hidden;
                 width: 650px;
                 height: 200px;
+
+                /*added for fade-in effect*/
             }
 
             /* myAd_Img Global style */
@@ -39,6 +41,7 @@
                 height: inherit;    /*inherits from @myAd*/
                 top: 0px;
                 left: 0px;
+                background-repeat: repeat-x;
             }
 
             #myAd #myAd_photo {
@@ -135,18 +138,25 @@
         <!-- banner script -->
         <script>
             (function(){
+                //TIMELINE 01
                 var tl1 = new TimelineMax();
 
                 //NON CHAINED version of the same
+                tl1.to('#myAd', 0.4, {opacity: 1});
                 tl1.from ('#myAd_txt2', 1.3, {top: -100, ease: Power2.easeOut });
                 tl1.to('#myAd_txt1', 1.3, {top: 210, ease: Power2.easeOut}, '-=0.9');
                 tl1.from ('#myAd_marker', 1.2, {top: -110, ease: Bounce.easeOut}, '-=0.5');
                 tl1.from ('#myAd_shadow', 1.2, {opacity: 0, ease: Bounce.easeOut}, '-=1.2');
                 tl1.from ('#myAd_txt3', 1.2, {scale: 0.2, opacity: 0, ease: Power2.easeOut}, '-=0.9');
-                tl1.from('#myAd_surfboard', 1.3, {top: 230, rotation: -180, left: 500, ease: Back.easeOut}, 'cta');
+                tl1.from('#myAd_surfboard', 1.3, {top: 260, rotation: -130, left: 300, ease: Back.easeOut}, 'cta');
 
-                // seek to 'cta' time to focus on just this action
-                tl1.seek('cta');
+                // seek to 'cta' time to focus on just this action for DEBUGGING
+                //tl1.seek('cta');
+
+                //TIMELINE 02
+                var tl2 = new TimelineMax({repeat: -1});
+
+                tl2.to('#myAd_clouds', 65, {backgroundPositionX: 649, ease: Power0.easeOut });
 
             })(); // AUTO-RUN javascript function
 

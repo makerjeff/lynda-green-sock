@@ -15,7 +15,6 @@ Tutorial for Green-Sock animation library.
 
 #### For sprites
 
-
 - **define sprite dimensions:** <br>
 ```width: 60px;``` <br>
 ```height: 95px;``` <br>
@@ -26,10 +25,6 @@ Tutorial for Green-Sock animation library.
 - **position sprite:** <br>
 ```top: 90px;``` <br>
 ```left: 290px;``` <br>
-
-
-
-
 
 
 ###Additional notes
@@ -45,14 +40,18 @@ Tutorial for Green-Sock animation library.
 - Use all custom div tags.
 
 - use Timeline feature of GreenSock library so you can easily chain animations.
-```tl1.from('#<div_id>', <seconds>, { <property>: <value>, ease: <ease function (Power2.easeOut, etc) >}, '-=<time offset>' );
+	- ```tl1.from('#<div_id>', <seconds>, { <property>: <value>, ease: <ease function (Power2.easeOut, etc) >}, '-=<time offset>' );```
 
 - animations can be chained using dot syntax '.'.
 
 - can also be named
+- can 'seek' to a certain 'name' tag, and you can preview your animation at that point.
+	- ```<timeline>.seek('<name>');```
 
-- <timeline>.seek('<name>');
-
+- declaring a timeline with an object argument ```tl2 = new TimeLineMax({repeat:-1});``` will set it to loop forever.
  
- 
+### Preloading with GreenSock (without pre-load)
+- fade in on load
+	- add ```opacity: 0``` to "myAd" style (inner container)
+	- add ```tl1.to('#myAd', 0.4, {opacity: 1});``` to the beginning of your animation stack and it'll fade in before other animations play.
 

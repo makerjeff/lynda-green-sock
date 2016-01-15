@@ -7,6 +7,7 @@ Tutorial for Green-Sock animation library.
 ###Links
 
 [Lynda: Creating a HTML5 Banner Ad with GreenSock](http://www.lynda.com/HTML-tutorials/Adding-background-clouds/373558/420197-4.html)
+[GreenSock](https://greensock.com/docs/#/HTML5/GSAP/)
 
 ###Steps
 

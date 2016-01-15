@@ -54,4 +54,8 @@ Tutorial for Green-Sock animation library.
 - fade in on load
 	- add ```opacity: 0``` to "myAd" style (inner container)
 	- add ```tl1.to('#myAd', 0.4, {opacity: 1});``` to the beginning of your animation stack and it'll fade in before other animations play.
+	
+	
+### Animating Individual Text
+- breakup all letters into spans, give them IDs of ```id="myAd_ltr##"```.
 

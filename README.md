@@ -7,6 +7,7 @@ Tutorial for Green-Sock animation library.
 ###Links
 
 [Lynda: Creating a HTML5 Banner Ad with GreenSock](http://www.lynda.com/HTML-tutorials/Adding-background-clouds/373558/420197-4.html)
+[GreenSock](https://greensock.com/docs/#/HTML5/GSAP/)
 
 ###Steps
 
@@ -54,4 +55,8 @@ Tutorial for Green-Sock animation library.
 - fade in on load
 	- add ```opacity: 0``` to "myAd" style (inner container)
 	- add ```tl1.to('#myAd', 0.4, {opacity: 1});``` to the beginning of your animation stack and it'll fade in before other animations play.
+	
+	
+### Animating Individual Text
+- breakup all letters into spans, give them IDs of ```id="myAd_ltr##"```.
 
